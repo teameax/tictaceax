@@ -5,7 +5,7 @@
   <modelVersion>4.0.0</modelVersion>
   <groupId>eax.fun</groupId>
   <version>1.0-SNAPSHOT</version>
-  <artifactId>calculator</artifactId>
+  <artifactId>tictactoe</artifactId>
   <dependencies>
     <dependency>
       <groupId>junit</groupId>
