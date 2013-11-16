@@ -1,1 +1,1 @@
-web: .bin/run --port $PORT
+web: ./bin/run --port $PORT
