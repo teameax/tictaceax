@@ -1,2 +1,11 @@
 language: java
 jdk: openjdk7
+branches:
+  only: master
+deploy:
+  provider: heroku
+  api_key:
+    secure: ieVL0OqUlclYQRTg6FzVj84trrqobDQ2a3k2VvJTjl/TPOYtes4FMuJfDBtpfFD+bxBo24kCcqgVuFV9sYWy+Lgh69+iUFFTkz1YI3xrKox6Dh0jztx1flmcsPc5ogfCgt4JtoGzII9IUGqzgLLoyU7pVqAlt8M4hoHgw9TXIxU=
+  app: tictaceax
+  on:
+    repo: teameax/tictaceax
