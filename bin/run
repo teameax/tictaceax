@@ -1,7 +1,4 @@
 #!/bin/bash
-<<<<<<< HEAD
 
-=======
 export PORT=4567
->>>>>>> b1947733793849948cc851ef29b43a7e14bb7eb7
 java -jar target/tictactoe-1.0-SNAPSHOT-jar-with-dependencies.jar
