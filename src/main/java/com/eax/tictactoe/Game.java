@@ -14,6 +14,10 @@ public class Game {
 		this.currentPlayer = 1;
 	}
 
+	public static int getCurrentPlayer() {
+		return currentPlayer;
+	}
+
 	public static int addMarker(int gridNumber) {
 		grid.gridInsert(currentPlayer, gridNumber);
 
