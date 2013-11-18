@@ -23,4 +23,12 @@ public class HumanPlayerTest {
 		p.setWinner();
 		assertEquals(true,p.isWinner());
 	}
+
+	@Test
+	public void testSetWin() {
+		Player p = new HumanPlayer(2);
+		p.setWinner();
+		p.setWinner();
+		assertEquals(false, p.isWinner());
+	}
 }
