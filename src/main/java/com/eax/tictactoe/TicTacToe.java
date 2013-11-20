@@ -11,13 +11,14 @@ public class TicTacToe {
         staticFileLocation("/public");
         setPort(Integer.valueOf(System.getenv("PORT")));
 
-        post(new Route("/") {
+        post(new Route("/game") {
             @Override
             public Object handle(Request request, Response response) {
                 Integer pos = Integer.valueOf(request.queryParams("pos"));
-                String player = Integer.toString(g.getCurrentPlayer());
-                String state = Integer.toString(g.addMarker(pos));
-                return "{\"player\":" + player + ",\"state\":" + state + "}";
+                //String player = Integer.toString(g.getCurrentPlayer())
+                Integer state = g.addMarker(pos);
+                System.out.print(state);
+                return state;
             }
         });
 

@@ -18,7 +18,7 @@ public class Game {
 		return currentPlayer;
 	}
 
-	public static int addMarker(int gridNumber) {
+	public static int addMarker(Integer gridNumber) {
 		grid.gridInsert(currentPlayer, gridNumber);
 
 		if(checkWinner(grid.getGrid()) != 0) {

@@ -11,22 +11,61 @@
       <h1>Tic Tac Toe</h1>
       <table class="table-bordered">
         <tr>
-          <td width="100px" height="100px" id="cell0"></td>
-          <td width="100px" height="100px" id="cell1"></td>
-          <td width="100px" height="100px" id="cell2"></td>
+          <td width="100px" height="100px" id="0" class="unmarked"></td>
+          <td width="100px" height="100px" id="1" class="unmarked"></td>
+          <td width="100px" height="100px" id="2" class="unmarked"></td>
         </tr>
         <tr>
-          <td width="100px" height="100px" id="cell3"></td>
-          <td width="100px" height="100px" id="cell4"></td>
-          <td width="100px" height="100px" id="cell5"></td>
+          <td width="100px" height="100px" id="3" class="unmarked"></td>
+          <td width="100px" height="100px" id="4" class="unmarked"></td>
+          <td width="100px" height="100px" id="5" class="unmarked"></td>
         </tr>
         <tr>
-          <td width="100px" height="100px" id="cell6"></td>
-          <td width="100px" height="100px" id="cell7"></td>
-          <td width="100px" height="100px" id="cell8"></td>
+          <td width="100px" height="100px" id="6" class="unmarked"></td>
+          <td width="100px" height="100px" id="7" class="unmarked"></td>
+          <td width="100px" height="100px" id="8" class="unmarked"></td>
         </tr>
       </table>
       <button type="button" class="btn btn-default">Restart</button>
+      <span id="state-box"></span>
     </div>
   </body>
+
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+  <script> 
+     $(document).ready(function() {
+    
+      $('.unmarked').on('click' ,  function(e) {
+        e.preventDefault();
+        var pos = $(this).attr('id');
+        console.log(pos);
+        $(this).attr('class', 'marked');
+        $.ajax({
+          type: "post",
+          url: "/game",
+          data: 'pos=' + pos,
+          success: function(status) {
+          if(status === "1") {
+            $("#state-box").append('Player 1 wins');
+          }
+          else if(status === "2") {
+            $("#state-box").append('Player 2 wins');
+          }
+          else if(status === "3") {
+            $("#state-box").append('Nobody wins, fools');
+          }
+          else {
+            $("#state-box").append('Playing...');
+          }
+          
+        },
+        error: function() {
+          $('#state-box').append('Villa kom upp');
+          $(this).attr('class', 'unmarked');
+        }
+        
+      });
+    });
+    });
+  </script>
 </html>
