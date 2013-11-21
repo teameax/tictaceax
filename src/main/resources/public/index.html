@@ -5,6 +5,11 @@
     <title>Tic-Tac-Toe</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0:">
     <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.2/css/bootstrap.min.css">
+    <style type="text/css">
+    p {
+      margin-left: 3em;
+    }
+    </style>
   </head>
   <body>
     <div class="container">
@@ -32,40 +37,59 @@
   </body>
 
   <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
-  <script> 
+  <script type="text/javascript"> 
      $(document).ready(function() {
     
       $('.unmarked').on('click' ,  function(e) {
         e.preventDefault();
         var pos = $(this).attr('id');
-        console.log(pos);
-        $(this).attr('class', 'marked');
+        $(this).removeClass();
         $.ajax({
           type: "post",
           url: "/game",
           data: 'pos=' + pos,
-          success: function(status) {
-          if(status === "1") {
-            $("#state-box").append('Player 1 wins');
-          }
-          else if(status === "2") {
-            $("#state-box").append('Player 2 wins');
-          }
-          else if(status === "3") {
-            $("#state-box").append('Nobody wins, fools');
-          }
-          else {
-            $("#state-box").append('Playing...');
-          }
+          success: function(data) {
+            player = data.charAt(0);
+            status = data.charAt(1);
+            if(status === "1") {
+              $("#state-box").text('Player 1 wins');
+              $(".unmarked:empty").append('<img src="hannes.jpg" alt="Smiley face" height="100px" width="100px">');
+            }
+            else if(status === "2") {
+              $("#state-box").text('Player 2 wins');
+              $(".unmarked:empty").append('<img src="hannes.jpg" alt="Smiley face" height="100px" width="100px">');
+            }
+            else if(status === "3") {
+              $("#state-box").text('Nobody wins, fools');
+              $(".unmarked:empty").append('<img src="hannes.jpg" alt="Smiley face" height="100px" width="100px">');
+            }
+            else {
+              $("#state-box").text('Playing...');
+            }
+
+            if(player === "1") {
+              $("#"+pos+":empty").append('<p class="marker">X</p>');
+
+            }
+            else if(player === "2") {
+              $("#"+pos+":empty").append('<p class="marker">O</p>');
+            }
           
-        },
-        error: function() {
-          $('#state-box').append('Villa kom upp');
-          $(this).attr('class', 'unmarked');
-        }
+          },
+          error: function() {
+            $('#state-box').text('Villa kom upp');
+            $(this).attr('class', 'unmarked');
+          }
         
       });
     });
+    $(':button').on('click', function(e){
+      e.preventDefault();
+      $.get('/restart');
+      $('.marker').remove();
+      $('img').remove();
+      $("#state-box").text(" ");
     });
+  });
   </script>
 </html>

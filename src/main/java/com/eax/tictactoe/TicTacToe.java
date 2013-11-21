@@ -15,10 +15,19 @@ public class TicTacToe {
             @Override
             public Object handle(Request request, Response response) {
                 Integer pos = Integer.valueOf(request.queryParams("pos"));
-                //String player = Integer.toString(g.getCurrentPlayer())
+                Integer player = g.getCurrentPlayer();
                 Integer state = g.addMarker(pos);
-                System.out.print(state);
-                return state;
+                
+                return (state + (10*player));
+            }
+        });
+
+        get(new Route("/restart") {
+            @Override
+            public Object handle(Request request, Response response) {
+                g = new Game();
+                return "FINISHED";
+
             }
         });
 
