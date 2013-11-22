@@ -6,9 +6,10 @@ deploy:
   provider: heroku
   api_key:
     secure: ieVL0OqUlclYQRTg6FzVj84trrqobDQ2a3k2VvJTjl/TPOYtes4FMuJfDBtpfFD+bxBo24kCcqgVuFV9sYWy+Lgh69+iUFFTkz1YI3xrKox6Dh0jztx1flmcsPc5ogfCgt4JtoGzII9IUGqzgLLoyU7pVqAlt8M4hoHgw9TXIxU=
-  app: tictaceax
+  app: staging-tictaceax
   on:
     repo: teameax/tictaceax
-after_scripts:
-  - export STAGING_SERVER=http://tictaceax.herokuapp.com/
+after_script:
+  - export STAGING_SERVER=http://staging-tictaceax.herokuapp.com/
   - sh bin/selenium_test_xvfb
+  - echo "STAGING looks good you should promote to PRODUCTION"
