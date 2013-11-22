@@ -51,21 +51,6 @@
           success: function(data) {
             player = data.charAt(0);
             status = data.charAt(1);
-            if(status === "1") {
-              $("#state-box").text('Player 1 wins');
-              $(".unmarked:empty").append('<img src="hannes.jpg" alt="Smiley face" height="100px" width="100px">');
-            }
-            else if(status === "2") {
-              $("#state-box").text('Player 2 wins');
-              $(".unmarked:empty").append('<img src="hannes.jpg" alt="Smiley face" height="100px" width="100px">');
-            }
-            else if(status === "3") {
-              $("#state-box").text('Nobody wins, fools');
-              $(".unmarked:empty").append('<img src="hannes.jpg" alt="Smiley face" height="100px" width="100px">');
-            }
-            else {
-              $("#state-box").text('Playing...');
-            }
 
             if(player === "1") {
               $("#"+pos+":empty").append('<p class="marker">X</p>');
@@ -74,7 +59,22 @@
             else if(player === "2") {
               $("#"+pos+":empty").append('<p class="marker">O</p>');
             }
-          
+
+            if(status === "1") {
+              $("#state-box").text('Player 1 wins');
+              $("td:empty").append('<img src="hannes.jpg" alt="Smiley face" height="100px" width="100px">');
+            }
+            else if(status === "2") {
+              $("#state-box").text('Player 2 wins');
+              $("td:empty").append('<img src="hannes.jpg" alt="Smiley face" height="100px" width="100px">');
+            }
+            else if(status === "3") {
+              $("#state-box").text('Nobody wins, fools');
+              $("td:empty").append('<img src="hannes.jpg" alt="Smiley face" height="100px" width="100px">');
+            }
+            else {
+              $("#state-box").text('Playing...');
+            }
           },
           error: function() {
             $('#state-box').text('Villa kom upp');

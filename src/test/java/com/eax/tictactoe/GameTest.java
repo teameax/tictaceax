@@ -82,5 +82,11 @@ public class GameTest {
 		assertEquals(0, g.addMarker(0));
 	}
 
+	@Test
+	public void testGetCurrentPlayer() {
+		Game g = new Game();
+		assertEquals(1, g.getCurrentPlayer());
+	}
+
 
 }
