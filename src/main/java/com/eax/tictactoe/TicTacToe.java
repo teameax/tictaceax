@@ -27,7 +27,7 @@ public class TicTacToe {
             @Override
             public Object handle(Request request, Response response) {
                 g = new Game();
-                return "FINISHED";
+                return null;
 
             }
         });

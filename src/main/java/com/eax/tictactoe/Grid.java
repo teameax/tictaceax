@@ -14,7 +14,7 @@ public class Grid {
 	{
 		return grid;
 	}
-	public void gridInsert(int player, int coordinate) throws IllegalArgumentException
+	public int gridInsert(int player, int coordinate) throws IllegalArgumentException
 	{
 		if(player != 1 && player != 2) //Invalid input, please try again
 		{
@@ -26,11 +26,12 @@ public class Grid {
 		}
 		else if(grid[coordinate] == 1 || grid[coordinate] == 2) //Used coordinate
 		{
-			return;
+			return -1;
 		}
 		else
 		{
 			grid[coordinate] = player;
+			return 0;
 		}
 	}
 }

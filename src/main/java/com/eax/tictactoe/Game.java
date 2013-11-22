@@ -18,9 +18,12 @@ public class Game {
 		return currentPlayer;
 	}
 
+	//adds marker where the player has clicked
 	public static int addMarker(Integer gridNumber) {
-		grid.gridInsert(currentPlayer, gridNumber);
-
+		int status = grid.gridInsert(currentPlayer, gridNumber);
+		if(status == -1) {
+			return 0;
+		}
 		if(checkWinner(grid.getGrid()) != 0) {
 			return checkWinner(grid.getGrid());
 		}
@@ -28,11 +31,13 @@ public class Game {
 		{
 			return 3;
 		}
+		//changes current player if marker is placed
 		changeCurrentPlayer();
 		return 0;
 	}
 
 	private static int checkWinner(int[] arr) {
+		//checks horizontal and vertical wins
 		for(int i = 0; i < 3; i++){
 			if ((arr[i * 3] != 0 && arr[(i * 3)] == arr[(i * 3) + 1] && 
 				arr[(i * 3)] == arr[(i * 3) + 2]) ||
@@ -41,11 +46,11 @@ public class Game {
 
 				return currentPlayer;
 			}
-			if((arr[0] != 0 && arr[0] == arr[4] && arr[0] == arr[8]) ||
-				(arr[2] != 0 && arr[2] == arr[4] && arr[2] == arr[6])) {
-
-				return currentPlayer;
-			}
+		}
+		//checks diagonal win
+		if((arr[0] != 0 && arr[0] == arr[4] && arr[0] == arr[8]) ||
+		   (arr[2] != 0 && arr[2] == arr[4] && arr[2] == arr[6])) {
+			return currentPlayer;
 		}
 		return 0;
 	}
@@ -59,6 +64,7 @@ public class Game {
 		}
 	}
 
+    //checks for ties
 	private static boolean isTie(int[] arr) {
 		for(int i = 0; i < 9; i++) {
 			if(arr[i] == 0) {

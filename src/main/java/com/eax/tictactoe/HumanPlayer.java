@@ -18,6 +18,7 @@ public class HumanPlayer implements Player {
 		return isWinner;
 	}
 
+	//toggles winner
 	public void setWinner() {
 		isWinner = !isWinner;
 	}
