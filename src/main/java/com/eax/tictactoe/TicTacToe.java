@@ -5,7 +5,7 @@ import spark.*;
 
 public class TicTacToe {
 
-    private static Game g = new Game();
+    private static Game g;
 
     public static void main(String[] args) {
         staticFileLocation("/public");
@@ -14,6 +14,7 @@ public class TicTacToe {
         post(new Route("/game") {
             @Override
             public Object handle(Request request, Response response) {
+                g = new Game();
                 Integer pos = Integer.valueOf(request.queryParams("pos"));
                 Integer player = g.getCurrentPlayer();
                 Integer state = g.addMarker(pos);

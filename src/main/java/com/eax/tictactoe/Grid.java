@@ -1,6 +1,6 @@
 
 package com.eax.tictactoe;
-import java.lang.String;
+
 public class Grid {
 	
 	private int[] grid = new int[9];
@@ -14,24 +14,23 @@ public class Grid {
 	{
 		return grid;
 	}
-	public String gridInsert(int player, int coordinate)
+	public void gridInsert(int player, int coordinate) throws IllegalArgumentException
 	{
 		if(player != 1 && player != 2) //Invalid input, please try again
 		{
-			return "Invalid input";
+			throw new IllegalArgumentException("Invalid player number");
 		}
-		else if(coordinate < 0 || coordinate > 8) //Out of bounch
+		else if(coordinate < 0 || coordinate > 8) //Out of bounds
 		{
-			return "Out of bounds";
+			throw new IllegalArgumentException("Invalid grid number");
 		}
 		else if(grid[coordinate] == 1 || grid[coordinate] == 2) //Used coordinate
 		{
-			return "Used column";
+			return;
 		}
 		else
 		{
 			grid[coordinate] = player;
-			return "Success";
 		}
 	}
 }
