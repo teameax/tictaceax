@@ -9,3 +9,6 @@ deploy:
   app: tictaceax
   on:
     repo: teameax/tictaceax
+after_scripts:
+  - export STAGING_SERVER=http://tictaceax.herokuapp.com/
+  - sh bin/selenium_test_xvfb
