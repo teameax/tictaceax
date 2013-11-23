@@ -19,9 +19,9 @@ Grid.java
 Player.java
 * Keeps track of each player
 * Keeps track of:
-        * The symbol of each player
-        * Checks if there is a winner
-        * Marks player as winner if he has won
+	* The symbol of each player
+	* Checks if there is a winner
+	* Marks player as winner if he has won
 
 Humanplayer.java
 
