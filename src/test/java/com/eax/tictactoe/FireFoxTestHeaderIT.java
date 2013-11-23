@@ -50,6 +50,8 @@ public class FireFoxTestHeaderIT {
 	@Test
 	public void clickFirstCell() throws Exception {
 		driver.get(baseUrl);
+		WebElement btn = driver.findElement(By.id("restart"));
+		btn.click();
 		WebElement cell1 = driver.findElement(By.id("1"));
 		cell1.click();
 		WebElement p1 = driver.findElement(By.className("marker"));
@@ -59,6 +61,8 @@ public class FireFoxTestHeaderIT {
 	@Test
 	public void clickSecondCell() throws Exception {
 		driver.get(baseUrl);
+		WebElement btn = driver.findElement(By.id("restart"));
+		btn.click();
 		WebElement cell1 = driver.findElement(By.id("1"));
 		cell1.click();
 		WebElement p1 = driver.findElement(By.className("marker"));
@@ -71,6 +75,8 @@ public class FireFoxTestHeaderIT {
 	@Test
 	public void checkStateBoxWhilePlaying() throws Exception {
 		driver.get(baseUrl);
+		WebElement btn = driver.findElement(By.id("restart"));
+		btn.click();
 		WebElement cell1 = driver.findElement(By.id("4"));
 		cell1.click();
 		WebElement sbox = driver.findElement(By.id("state-box"));
@@ -80,6 +86,8 @@ public class FireFoxTestHeaderIT {
 	@Test
 	public void playerOneWins() throws Exception {
 		driver.get(baseUrl);
+		WebElement btn = driver.findElement(By.id("restart"));
+		btn.click();
 		WebElement cell1 = driver.findElement(By.id("8"));
 		cell1.click();
 		WebElement cell2 = driver.findElement(By.id("5"));
@@ -93,6 +101,28 @@ public class FireFoxTestHeaderIT {
 		WebElement sbox = driver.findElement(By.id("state-box"));
 		assertEquals("Player 1 wins", sbox.getText());
 	}
+
+	@Test
+	public void playerTwoWins() throws Exception {
+		driver.get(baseUrl);
+		WebElement btn = driver.findElement(By.id("restart"));
+		btn.click();
+		WebElement cell0 = driver.findElement(By.id("8"));
+		cell0.click();
+		WebElement cell1 = driver.findElement(By.id("0"));
+		cell1.click();
+		WebElement cell2 = driver.findElement(By.id("6"));
+		cell2.click();
+		WebElement cell3 = driver.findElement(By.id("1"));
+		cell3.click();
+		WebElement cell4 = driver.findElement(By.id("3"));
+		cell4.click();
+		WebElement cell5 = driver.findElement(By.id("2"));
+		cell5.click();
+		WebElement sbox = driver.findElement(By.id("state-box"));
+		assertEquals("Player 2 wins", sbox.getText());
+	}
+
 
 
 	@After
