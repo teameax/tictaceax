@@ -1,5 +1,7 @@
 language: java
 jdk: openjdk7
+cache: apt
+env: COVERTOKEN=sxLu9vzCd8vwevxFgnQ0xX/JRLyc3fnrmOiVX8b+anmkhxB3Az8UbChrWdp9u0rRl1bvUTEB5d9BAVhaRB/zBbNISKFRgNWGZdhTAv2UhCAYv3UobcOruZRbgSDO97MNEw2xf9VHfQd/Fnk9UFWXQSxCMrTO0mWJTDLUiljcTgQ=
 branches:
   only: master
 deploy:
@@ -17,3 +19,9 @@ after_script:
   - "sh bin/selenium_test_xvfb"
 after_success:
   - mvn test jacoco:report coveralls:jacoco
+notifications:
+  email:
+    recipients:
+      - teameax@groups.facebook.com
+    on_success: always
+    on_failuer: always
