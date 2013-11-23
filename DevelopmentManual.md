@@ -3,6 +3,8 @@
 Development manual is intended for Linux systems, Windows users are on their own.
 
 ### Installing
+Before installing any packet be sure to update your repository listings ```sudo apt-get update ``` or ```sudo yum update``
+
 ####Git: 
 Can be installed using ```sudo apt-get install git``` or ```sudo yum install git``` depending on your distro.
 It can also be found at the [GitHub website] (http://git-scm.com/book/en/Getting-Started-Installing-Git).
@@ -13,6 +15,9 @@ Can be installed using ```sudo apt-get install maven``` or ```sudo yum install m
 ####Open JDK 7:
 Can be installed using ```sudo apt-get install openjdk-7-jdk``` or ```sudo yum install openjdk-7-jdk```.
 Be sure you have Java 1.7 installed, check this by typing ```java -version```.
+If your Java version is not 1.7 go to your home directory and type ```nano .bashrc```. 
+In that file, write the following text at the top ```export JAVA_HOME=/usr/lib/jvm/java-7-openjdk-i386/amd64``` and ```export PATH = $JAVA_HOME/bin:PATH``` below
+
 						 
 ####Firefox:
 Can be installed using ```sudo apt-get install firefox``` or ```sudo yum install firefox```. Make sure you are getting the latest build by running ```sudo apt-get update``` or ```sudo yum update```.
