@@ -10,6 +10,8 @@ deploy:
   on:
     repo: teameax/tictaceax
 after_script:
-  - export STAGING_SERVER=http://staging-tictaceax.herokuapp.com/
-  - sh bin/selenium_test_xvfb
-  - echo "STAGING looks good you should promote to PRODUCTION"
+  - "export STAGING_SERVER=http://staging-tictaceax.herokuapp.com/"
+  - "export DISPLAY=:99.0"
+  - "sh -e /etc/init.d/xvfb start"
+  - "/sbin/start-stop-daemon --start --quiet --pidfile /tmp/custom_xvfb_99.pid --make-pidfile --background --exec /usr/bin/Xvfb -- :99 -ac -screen 0 1280x1024x16"
+  - "sh bin/selenium_test_xvfb"
