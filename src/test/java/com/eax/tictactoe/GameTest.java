@@ -6,7 +6,7 @@ import org.junit.Test;
 public class GameTest {
 
 	@Test
-	public void testWinner() {
+	public void testWinnerVertical() {
 		Game g = new Game();
 
 		int a = g.addMarker(0);
@@ -19,7 +19,7 @@ public class GameTest {
 	}
     
     @Test
-	public void testWinnerVert() {
+	public void testWinnerVertical2() {
 		Game g = new Game();
         
 		int a = g.addMarker(0);
@@ -33,7 +33,7 @@ public class GameTest {
 	}
     
     @Test
-	public void testWinnerVertical() {
+	public void testWinnerVertical3() {
 		Game g = new Game();
         
 		int a = g.addMarker(2);
@@ -150,13 +150,13 @@ public class GameTest {
 	}
 
 	@Test
-	public void testGetCurrentPlayer() {
+	public void testGetCurrentPlayer1() {
 		Game g = new Game();
 		assertEquals(1, g.getCurrentPlayer());
 	}
     
     @Test
-    public void testGetCurrentPlayer() {
+    public void testGetCurrentPlayer2() {
         Game g = new Game();
         int a = g.addMarker(0);
         assertEquals(2, g.getCurrentPlayer());
