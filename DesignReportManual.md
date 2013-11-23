@@ -30,4 +30,4 @@ Humanplayer.java
 * Stores if the player has won
 * Set player as winner if he has won
 
-![Klasarit](http://imgur.com/7GY49wy)
+[Imgur](http://i.imgur.com/7GY49wy.png)
