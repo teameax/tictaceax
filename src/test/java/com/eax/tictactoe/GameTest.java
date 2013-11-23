@@ -161,4 +161,11 @@ public class GameTest {
         int a = g.addMarker(0);
         assertEquals(2, g.getCurrentPlayer());
     }
+    
+    @Test
+    public void testIsMarked() {
+        Game g = new Game();
+        int a = g.addMarker(0);
+        assertEquals(0, g.addMarker(0));
+    }
 }
