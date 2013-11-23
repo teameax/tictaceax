@@ -3,7 +3,7 @@
 Development manual is intended for Linux systems, Windows users are on their own.
 
 ### Installing
-Before installing any packet be sure to update your repository listings ```sudo apt-get update ``` or ```sudo yum update``
+Before installing any packet be sure to update your repository listings ```sudo apt-get update ``` or ```sudo yum update```
 
 ####Git: 
 Can be installed using ```sudo apt-get install git``` or ```sudo yum install git``` depending on your distro.
@@ -16,7 +16,8 @@ Can be installed using ```sudo apt-get install maven``` or ```sudo yum install m
 Can be installed using ```sudo apt-get install openjdk-7-jdk``` or ```sudo yum install openjdk-7-jdk```.
 Be sure you have Java 1.7 installed, check this by typing ```java -version```.
 If your Java version is not 1.7 go to your home directory and type ```nano .bashrc```. 
-In that file, write the following text at the top ```export JAVA_HOME=/usr/lib/jvm/java-7-openjdk-i386/amd64``` and ```export PATH = $JAVA_HOME/bin:PATH``` below
+In that file, write the following text at the top ```export JAVA_HOME=/usr/lib/jvm/java-7-openjdk-i386``` for 32bit OS and ```export JAVA_HOME=/usr/lib/jvm/java-7-openjdk-amd64``` for 64bit OS.
+Below that write ```export PATH = $JAVA_HOME/bin:PATH``` 
 
 						 
 ####Firefox:
@@ -28,7 +29,7 @@ NOTE: You need at least Firefox version 24 to run the selenium tests.
 
 Travel to your desired download directory that you want the project to be located.
 Clone the project folder from github using ```git clone https://github.com/teameax/tictaceax```.
-Get your favorite supervisor to add you to the company listing on github otherwise you can’t push any changes or you could contact [us] (support@eax.com).
+Get your favorite supervisor to add you to the company listing on github. (Otherwise you can’t push any changes) or you can contact [us] (support@eax.com).
 
 ###What we are using:
 
