@@ -163,7 +163,7 @@ public class GameTest {
     }
     
     @Test
-    public void testIsMarked() {
+    public void testIsAlreadyMarked() {
         Game g = new Game();
         int a = g.addMarker(0);
         assertEquals(0, g.addMarker(0));
