@@ -63,7 +63,8 @@ Firefox should at least be in version 24 but it is fine if you have a newer vers
 
 ###Web:
 
-If you were to make a website and you wanted to make a new version derived from our product. You could make the desired changes to the program and simply add your changes to the GitHub repository by typing in git add name_of_file. One thing you should remember though is to add a simple message alongside your changes so that others could easily detect the modification you do so by -m “message” in line with the commands to add the file. 
+If you were to make a website and you wanted to make a new version derived from our product. You could make the desired changes to the program and simply add your changes to the GitHub repository by typing in```git add name_of_file```
+One thing you should remember though is to add a simple message alongside your changes so that others could easily detect the modification you do so by -m “message” in line with the commands to add the file. 
 
 
 ##Design Report
