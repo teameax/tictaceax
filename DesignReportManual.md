@@ -31,7 +31,7 @@ Humanplayer.java
 * Set player as winner if he has won
 
 			 ______________
-			|			   |
+```			|			   |
 			|  TicTacToe   |
 			|  Controller  |
 			|______________|
@@ -57,4 +57,4 @@ Humanplayer.java
 						|			       |
 						| HumanPlayer.java |
 						|              	   |
-						|__________________|
+						|__________________|```
