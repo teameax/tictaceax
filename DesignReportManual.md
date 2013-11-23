@@ -1,6 +1,6 @@
 ##Design Report
 
-The goal of the programming part of the project is to make additional independent classes to develop loo$
+The goal of the programming part of the project is to make additional independent classes to develop loosely coupled code.
 
 Game.java:
 + The java class Game.java handles the game and the players.
@@ -19,7 +19,7 @@ Grid.java
 Player.java
 * Keeps track of each player
 * Keeps track of:
-        + The symbol of each player
+        * The symbol of each player
         * Checks if there is a winner
         * Marks player as winner if he has won
 
