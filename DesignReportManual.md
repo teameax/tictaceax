@@ -30,4 +30,31 @@ Humanplayer.java
 * Stores if the player has won
 * Set player as winner if he has won
 
-[Imgur](http://i.imgur.com/7GY49wy.png)
+			 ______________
+			|			   |
+			|  TicTacToe   |
+			|  Controller  |
+			|______________|
+					|
+					|
+			 ______________
+			|			   |
+			|   Game.java  |
+			|              |
+			|______________|
+					|
+		 ___________|___________
+		|						|
+		|						|
+ ______________			 _______________			
+|			   |		|				|
+|   Game.java  |		|	Player.java |
+|              |		|               |
+|______________|		|_______________|
+								|
+								|
+						 __________________
+						|			       |
+						| HumanPlayer.java |
+						|              	   |
+						|__________________|
