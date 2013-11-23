@@ -5,7 +5,7 @@ Tic-Tac-Eax
 
 Development manual is intended for Linux systems, Windows users are on their own.
 
-## Installing
+### Installing
 ####Git: 
 Can be installed using ```sudo apt-get install git``` or ```sudo yum install git``` depending on your distro.
 It can also be found at the [GitHub website] (http://git-scm.com/book/en/Getting-Started-Installing-Git)
@@ -22,13 +22,13 @@ Can be installed using ```sudo apt-get install firefox``` or ```sudo yum install
 NOTE: You need at least Firefox version 24 to run the selenium tests.
 			 
 
-##How to get started:
+###How to get started:
 
 Travel to your desired download directory that you want the project to be located.
 Clone the project folder from github using ```git clone https://github.com/teameax/tictaceax```.
 Get your favorite supervisor to add you to the company listing on github otherwise you can’t push any changes or you could contact [us] (support@eax.com).
 
-##What we are using:
+###What we are using:
 
 [Maven](http://maven.apache.org) handles all the dependency issues for us but some are important to know before programming anything.
 [Spark](http://www.sparkjava.com/index.html) is being used for a web framework, a light framework perfect for our needs.
@@ -36,7 +36,7 @@ Get your favorite supervisor to add you to the company listing on github otherwi
 [jUnit](http://junit.org/) is the choice for unit testing.
 
 
-##What you need to know:
+###What you need to know:
 
 The ```/bin``` folder contains all the necessary build scripts for development.
 The main ones are compile, clean and unit_test, all are important to run a good test driven development cycle.
@@ -69,14 +69,13 @@ If you were to make a website and you wanted to make a new version derived from 
 
 The goal of the programming part of the project is to make additional independent classes to develop loosely coupled code.  
 Game.java:
-
-	*The java class Game.java handles the game and the players.
-	*Mark the column selected by the player
-	*Checks if invalid arguments are inputted
-	*Checks if there is a winner of the game 
-	*Checks if there is a tie
-	*Keeps track of players move
-	*Switch players after players turn
+*The java class Game.java handles the game and the players.
+*Mark the column selected by the player
+*Checks if invalid arguments are inputted
+*Checks if there is a winner of the game 
+*Checks if there is a tie
+*Keeps track of players move
+*Switch players after players turn
 	
 Grid.java
 
