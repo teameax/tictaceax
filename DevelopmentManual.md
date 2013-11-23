@@ -40,6 +40,6 @@ The main ones are compile, clean and unit_test, all are important to run a good 
 The more extensive ones are package, build and selenium_test, 
 *.build* goes through the whole process and delivers a runnable
 *.jar* file, *.package* also does this but in a different way.
- Selenium_test is used for integration testing, the standard file is used on a GUI system where Firefox can run. Other variations for integration testing are *.selenium_test_xvfb* that is designed for use on non-GUI systems.
+Selenium_test is used for integration testing, the standard file is used on a GUI system where Firefox can run. Other variations for integration testing are *.selenium_test_xvfb* that is designed for use on non-GUI systems.
 Finally the *.run* scripts starts Spark on your local machine for testing.
 
