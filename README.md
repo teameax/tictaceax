@@ -68,6 +68,7 @@ If you were to make a website and you wanted to make a new version derived from 
 ##Design Report
 
 The goal of the programming part of the project is to make additional independent classes to develop loosely coupled code.  
+
 Game.java:
 + The java class Game.java handles the game and the players.
 + Mark the column selected by the player
@@ -79,8 +80,8 @@ Game.java:
 	
 Grid.java
 
-*Initializes the board and keeps track of it
-*Mark column by player move
+* Initializes the board and keeps track of it
+* Mark column by player move
 
 Player.java
 * Keeps track of each player
@@ -91,10 +92,10 @@ Player.java
 
 Humanplayer.java
 
-*Implements the player, each player has identical version of the class
-*Stores the identical symbol of each player
-*Stores if the player has won
-*Set player as winner if he has won
+* Implements the player, each player has identical version of the class
+* Stores the identical symbol of each player
+* Stores if the player has won
+* Set player as winner if he has won
 
 
 Administration Manual
