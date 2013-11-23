@@ -1,7 +1,8 @@
 language: java
 jdk: openjdk7
 cache: apt
-env: COVERTOKEN=sxLu9vzCd8vwevxFgnQ0xX/JRLyc3fnrmOiVX8b+anmkhxB3Az8UbChrWdp9u0rRl1bvUTEB5d9BAVhaRB/zBbNISKFRgNWGZdhTAv2UhCAYv3UobcOruZRbgSDO97MNEw2xf9VHfQd/Fnk9UFWXQSxCMrTO0mWJTDLUiljcTgQ=
+env: 
+  - secure: sqc2ZjsFIFR2jPMtKLE1ZorFiHKvoCQLQNF1wAwFXrLiURh+nPAfV1uME9K/YI/LM6orN9GX2BpXdIM50moHxZGqoDCmmoXlsTUStou/GctN0vpLK3RM4xGvNGKutIBzR8WFSD0lKopXml0RFZrLlVWv/FXUdFMIRiV6foFzV70=
 branches:
   only: master
 deploy:
@@ -21,7 +22,6 @@ after_script:
   - "sh bin/selenium_test_xvfb"
 after_success:
   - mvn test jacoco:report coveralls:jacoco
-  - git push heroku master
 notifications:
   email:
     recipients:
