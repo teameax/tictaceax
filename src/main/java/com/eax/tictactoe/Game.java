@@ -6,14 +6,16 @@ public class Game {
 	private static Player player1;
 	private static Player player2;
 	private static int currentPlayer;
-
+	
+	//Initialize the game
 	public Game() {
 		this.grid = new Grid();
 		this.player1 = new HumanPlayer(1);
 		this.player2 = new HumanPlayer(2);
 		this.currentPlayer = 1;
 	}
-
+	
+	//Return wich player is playing
 	public static int getCurrentPlayer() {
 		return currentPlayer;
 	}
@@ -35,7 +37,7 @@ public class Game {
 		changeCurrentPlayer();
 		return 0;
 	}
-
+	
 	private static int checkWinner(int[] arr) {
 		//checks horizontal and vertical wins
 		for(int i = 0; i < 3; i++){
@@ -64,7 +66,7 @@ public class Game {
 		}
 	}
 
-    //checks for ties
+     	//checks for ties
 	private static boolean isTie(int[] arr) {
 		for(int i = 0; i < 9; i++) {
 			if(arr[i] == 0) {
