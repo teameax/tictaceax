@@ -48,7 +48,7 @@ Finally the *.run* scripts starts Spark on your local machine for testing.
 
 ##Administration Manual
 
-Development manual is intended for Linux systems, Windows users are on their own.
+Administration manual is intended for Linux systems, Windows users are on their own.
 
 ###Demands:
 
@@ -99,9 +99,5 @@ Humanplayer.java
 * Set player as winner if he has won
 
 
-Administration Manual
 
-Development manual is intended
-
-Demands:
 
