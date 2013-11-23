@@ -69,13 +69,13 @@ If you were to make a website and you wanted to make a new version derived from 
 
 The goal of the programming part of the project is to make additional independent classes to develop loosely coupled code.  
 Game.java:
-*The java class Game.java handles the game and the players.
-*Mark the column selected by the player
-*Checks if invalid arguments are inputted
-*Checks if there is a winner of the game 
-*Checks if there is a tie
-*Keeps track of players move
-*Switch players after players turn
++ The java class Game.java handles the game and the players.
++ Mark the column selected by the player
++ Checks if invalid arguments are inputted
+- Checks if there is a winner of the game 
+- Checks if there is a tie
++ Keeps track of players move
++ Switch players after players turn
 	
 Grid.java
 
@@ -83,11 +83,11 @@ Grid.java
 *Mark column by player move
 
 Player.java
-*Keeps track of each player
-*Keeps track of:
-	*The symbol of each player
-	*Checks if there is a winner
-	*Marks player as winner if he has won
+* Keeps track of each player
+* Keeps track of:
+	+ The symbol of each player
+	* Checks if there is a winner
+	* Marks player as winner if he has won
 
 Humanplayer.java
 
