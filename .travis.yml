@@ -8,7 +8,9 @@ deploy:
   provider: heroku
   api_key:
     secure: ieVL0OqUlclYQRTg6FzVj84trrqobDQ2a3k2VvJTjl/TPOYtes4FMuJfDBtpfFD+bxBo24kCcqgVuFV9sYWy+Lgh69+iUFFTkz1YI3xrKox6Dh0jztx1flmcsPc5ogfCgt4JtoGzII9IUGqzgLLoyU7pVqAlt8M4hoHgw9TXIxU=
-  app: staging-tictaceax
+  app: 
+    master: staging-tictaceax
+    production: tictaceax
   on:
     repo: teameax/tictaceax
 after_script:
@@ -19,9 +21,15 @@ after_script:
   - "sh bin/selenium_test_xvfb"
 after_success:
   - mvn test jacoco:report coveralls:jacoco
+  - git push heroku master
 notifications:
   email:
     recipients:
-      - teameax@groups.facebook.com
-    on_success: always
+      - aevar12@ru.is
+      - sigursteinn11@ru.is
+      - jonaj11@ru.is
+      - aria12@ru.is
+      - arnarhk10@ru.is
+      - marteinnt10@ru.is
+    on_success: change
     on_failuer: always
