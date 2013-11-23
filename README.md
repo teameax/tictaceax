@@ -1,6 +1,10 @@
 Tic-Tac-Eax
 =========
 
+[![Coverage Status](https://coveralls.io/repos/teameax/tictaceax/badge.png?branch=master)](https://coveralls.io/r/teameax/tictaceax?branch=master)
+
+[![Build Status](https://travis-ci.org/teameax/tictaceax.png?branch=master)](https://travis-ci.org/teameax/tictaceax)
+
 ##Development Manual
 
 Development manual is intended for Linux systems, Windows users are on their own.
