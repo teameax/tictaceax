@@ -58,6 +58,7 @@ Maven can be installed like Git by using ```sudo apt-get install maven``` or ```
 
 After installing all that, you must check the version of your Open JDK 7 by typing ```java -version``` in your terminal, it should be version 1.7. 
 If your version of java is not 1.7, you can get it by typing ```sudo apt-get install openjdk-7-jdk``` or ```sudo yum install openjdk-7-jdk``` (depending on your distro) in your terminal.
+
 Firefox should at least be in version 24 but it is fine if you have a newer version. You can get the newest version of Firefox by typing ```sudo apt-get update``` or ```sudo yum update firefox```. These should be the only necessarily installed programs on the computer.
 
 ###Web:
